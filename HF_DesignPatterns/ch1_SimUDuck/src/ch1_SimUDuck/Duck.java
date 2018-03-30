@@ -26,6 +26,13 @@ public abstract class Duck {
 		System.out.println("All ducks float, event decoys!");
 	}
 	
-	// other?
+	// Setters
+	public void setFlyBehavior(FlyBehavior fb) {
+		flyBehavior = fb;
+	}
+	
+	public void setQuackBehavior(QuackBehavior qb) {
+		quackBehavior = qb;
+	}
 	
 }
