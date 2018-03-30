@@ -1,18 +1,30 @@
 package ch1_SimUDuck;
 
-public class Duck {
+public abstract class Duck {
 
 	// Instance variables
 	FlyBehavior flyBehavior;
 	QuackBehavior quackBehavior;
 	
 	// Constructor
+	public Duck() {
+		// stuff goes here
+	}
 	
-	// Functions -> still need to implement them
-	public void performQuack() {};
-	public void swim() {};
-	public void display() {};
-	public void performFly() {};
+	// Functions
+	public abstract void display();
+	
+	public void performQuack() {
+		quackBehavior.quack();
+	}
+	
+	public void performFly() {
+		flyBehavior.fly();
+	}
+	
+	public void swim() {
+		System.out.println("All ducks float, event decoys!");
+	}
 	
 	// other?
 	
